@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/images/nms-logo.png" alt="Logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse column-gap-4" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item mx-2">
+              <a class="nav-link p1" href="home.html">Home</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link p1" href="contact.html">Contact Us</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="btn btn-browse-jobs p1" href="browse-jobs.html">Browse Jobs</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="wrapper container-fluid d-flex" style="min-height: 100vh; gap: 24px;">
+      <!-- Left column (sidebar) -->
+      <div class="col-md-4 bg-light p-4" style="border-radius: 20px;">
+        <h3>Application Process</h3>
+        <ul class="list-unstyled">
+          <li><strong>Step 1:</strong> Verify Identity</li>
+          <li><strong>Step 2:</strong> Fill Application</li>
+          <li style="color: #FF4545;"><strong>Step 3:</strong> Assessment Test</li>
+
+        </ul>
+      </div>
+
+      <!-- Right column (application content) -->
+      <div class="col-md-7 d-flex flex-column p-5" style="border: 2px solid #FF4545; border-radius: 20px; padding: 20px;">
+        <!-- Step 2: Pre-Screening -->
+        <div id="step-2">
+          <h3>Step 3 of 3: Assessment Test</h3>
+
+  <div class="container mt-5">
+    <div class="mb-4">
+      <p>Test your English grammar skills. You will be asked to identify and correct errors in a set of sentences.<p>
+
+      <!-- Question 1 -->
+      <div class="mb-3">
+        <h6>1. Choose the correct sentence:</h6>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q1" id="q1-option1" />
+          <label class="form-check-label" for="q1-option1">
+            She don’t like the new policy.
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q1" id="q1-option2" />
+          <label class="form-check-label" for="q1-option2">
+            She doesn't like the new policy.
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q1" id="q1-option3" />
+          <label class="form-check-label" for="q1-option3">
+            She didhn't like the new policy.
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q1" id="q1-option4" />
+          <label class="form-check-label" for="q1-option4">
+            She don’t likes the new policy.
+          </label>
+        </div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="mb-3">
+        <h6>2. Choose the correct sentence:</h6>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q2" id="q2-option1" />
+          <label class="form-check-label" for="q2-option1">
+            I was going to the office when I see him.
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q2" id="q2-option2" />
+          <label class="form-check-label" for="q2-option2">
+            I am going to the office when I saw him.
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q2" id="q2-option3" />
+          <label class="form-check-label" for="q2-option3">
+            I was going to the office when I saw him.
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q2" id="q2-option4" />
+          <label class="form-check-label" for="q2-option4">
+            I were going to the office when I see him.
+          </label>
+        </div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="mb-3">
+        <h6>3. Choose the correct sentence:</h6>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q3" id="q3-option1" />
+          <label class="form-check-label" for="q3-option1">
+            Me and my team will complete the project on time.
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q3" id="q3-option2" />
+          <label class="form-check-label" for="q3-option2">
+            My team and I will complete the project on time.
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q3" id="q3-option3" />
+          <label class="form-check-label" for="q3-option3">
+            I and my team will complete the project on time.
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q3" id="q3-option4" />
+          <label class="form-check-label" for="q3-option4">
+            Me and my team completes the project on time.
+          </label>
+        </div>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="mb-3">
+        <h6>4. She has been working ___ this company for 3 years.</h6>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q4" id="q4-option1" />
+          <label class="form-check-label" for="q4-option1">
+            on
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q4" id="q4-option2" />
+          <label class="form-check-label" for="q4-option2">
+            at
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q4" id="q4-option3" />
+          <label class="form-check-label" for="q4-option3">
+            in
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q4" id="q4-option4" />
+          <label class="form-check-label" for="q4-option4">
+            for
+          </label>
+        </div>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="mb-3">
+        <h6>5. He is ___ engineer at the local firm.</h6>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q5" id="q5-option1" />
+          <label class="form-check-label" for="q5-option1">
+            a
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q5" id="q5-option2" />
+          <label class="form-check-label" for="q5-option2">
+            an
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q5" id="q5-option3" />
+          <label class="form-check-label" for="q5-option3">
+            the
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q5" id="q5-option4" />
+          <label class="form-check-label" for="q5-option4">
+            no article
+          </label>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+                
+                                <!-- Next Button -->
+          <div class="text-center mt-4">
+            <a class="btn btn-primary" style="border-radius: 20px; background-color: #FF4545; border-color: #FF4545;" href="complete.html">Submit Application</a>
+          </div>
+                
+          
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

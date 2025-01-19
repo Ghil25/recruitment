@@ -1,0 +1,181 @@
+/* Global Font Family */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+.margin {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+  
+  /* Navbar Customizations */
+  .navbar {
+    height: 99px; /* Set the height of the navbar */
+  }
+  
+  /* Navbar Links */
+  .navbar-nav .nav-link {
+    margin-right: 50px; /* Default spacing between links */
+    font-size: 16px; /* Set navbar links' text size to 16px */
+  }
+  
+.button {
+    background-color: #FF4545; 
+    width: fit-content; 
+    height: fit-content; 
+    border-radius: 20px; 
+    padding: 8px 16px;
+}
+
+
+input::placeholder {
+    word-wrap: break-word;
+    white-space: normal;
+  }
+
+  /* Button Styling */
+  /* Button Styling */
+
+.navbar .btn-browse-jobs {
+    font-size: 16px; /* Set button text size to 16px */
+    padding: 8px 16px; /* Set top and bottom padding to 16px */
+    background-color: #FF4545; /* Set button fill color to FF4545 */
+    color: white; /* Set button text color to white */
+    border: none; /* Remove any borders */
+    border-radius: 20px; /* Optional: add rounded corners for better appearance */
+  }
+  
+  .navbar .btn-browse-jobs:hover {
+    background-color: #e04343; /* Darker shade on hover for better UX */
+  }
+  
+  .btn-hover:hover {
+    background-color: #e04343; /* Darker shade on hover for better UX */
+  }
+
+  /* Ensure last link does not have extra margin */
+  .navbar-nav .nav-link:last-child {
+    margin-right: 0;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 1440px) {
+    .navbar-nav .nav-link {
+      margin-right: 30px; /* Reduce spacing for smaller screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-nav .nav-link {
+      margin-right: 0;
+      text-align: center;
+    }
+  
+    .btn-browse-jobs {
+      margin-top: 10px; /* Add spacing for button on mobile */
+    }
+  }
+  
+.wrapper {
+    padding: 50px 100px;
+}
+
+.filters {
+    padding: 24px 24px;
+}
+
+.jobs ul {
+    color: #FF4545;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.jobs ul li a {
+    list-style: none;
+    text-decoration: none;
+    color: #FF4545;
+}
+
+.tag {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #FF4545;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.tag ul {
+    color: #FF4545;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.main {
+    display: flex;
+    gap: 24px; /* Space between filter box and job cards */
+}
+
+.filters {
+    flex: 0 0 auto;             /* Ensure the filter box width is fixed but height auto grows with content */
+    height: auto;               /* The height will adjust based on content */
+    overflow: hidden;           /* Prevent overflow if content exceeds */
+}
+
+.jobs {
+    flex-grow: 1; /* Takes up the remaining space */
+    height: auto;
+}
+
+.navbar .btn-view {
+    font-size: 16px; /* Set button text size to 16px */
+    padding: 8px 16px; /* Set top and bottom padding to 16px */
+    background-color: #FF4545; /* Set button fill color to FF4545 */
+    color: white; /* Set button text color to white */
+    border: none; /* Remove any borders */
+    border-radius: 20px; /* Optional: add rounded corners for better appearance */
+  }
+
+.see-more {
+    color: #FF4545;
+}
+
+.right-column {
+    max-height: 100vh;
+    overflow-y: auto;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .upload-box {
+    border: 2px dashed #ccc;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 20px;
+  }
+  .signature-box {
+    border: 2px solid #ccc;
+    padding: 16px;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 20px;
+  }
+  .signature-box canvas {
+    width: 100%;
+    height: 100%;
+  }
+  .signature-box button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }

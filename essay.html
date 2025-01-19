@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/images/nms-logo.png" alt="Logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse column-gap-4" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item mx-2">
+              <a class="nav-link p1" href="home.html">Home</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link p1" href="contact.html">Contact Us</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="btn btn-browse-jobs p1" href="browse-jobs.html">Browse Jobs</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="wrapper container-fluid d-flex" style="min-height: 100vh; gap: 24px;">
+      <!-- Left column (sidebar) -->
+      <div class="col-md-4 bg-light p-4" style="border-radius: 20px;">
+        <h3>Application Process</h3>
+        <ul class="list-unstyled">
+          <li><strong>Step 1:</strong> Verify Identity</li>
+          <li><strong>Step 2:</strong> Fill Application</li>
+          <li style="color: #FF4545;"><strong>Step 3:</strong> Assessment Test</li>
+
+        </ul>
+      </div>
+
+      <!-- Right column (application content) -->
+      <div class="col-md-7 d-flex flex-column p-5" style="border: 2px solid #FF4545; border-radius: 20px; padding: 20px;">
+        <!-- Step 2: Pre-Screening -->
+        <div id="step-2">
+          <h3>Step 3 of 3: Assessment Test</h3>
+
+          <div class="mb-4">
+            <p>Please write a minimum of 250 words on the following topic. Take your time to craft your response.</p>
+            <h6>Topic: Describe your most significant professional achievement and how you contributed to its success.</h6>
+      
+            <!-- Essay Text Area -->
+            <div class="mb-3">
+              <label for="essay-textarea" class="form-label"></label>
+              <textarea class="form-control" id="essay-textarea" rows="6" placeholder="Type your answer here..." required></textarea>
+            </div>
+      
+            <!-- Word Count Display -->
+            <div class="d-flex justify-content-end">
+              <span class="word-count" id="word-count">0/250 words</span>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Add JavaScript for Word Count -->
+        <script>
+          const essayTextarea = document.getElementById('essay-textarea');
+          const wordCountDisplay = document.getElementById('word-count');
+          const submitButton = document.getElementById('submit-button');
+      
+          // Function to update word count
+          function updateWordCount() {
+            const words = essayTextarea.value.trim().split(/\s+/).filter(Boolean);
+            const wordCount = words.length;
+            wordCountDisplay.textContent = `${wordCount}/250 words`;
+      
+            // Enable or disable submit button based on word count
+            if (wordCount >= 250) {
+              submitButton.disabled = false;
+            } else {
+              submitButton.disabled = true;
+            }
+          }
+      
+          // Event listener for text input
+          essayTextarea.addEventListener('input', updateWordCount);
+        </script>
+                
+                                <!-- Next Button -->
+          <div class="text-center mt-4">
+            <a class="btn btn-primary" style="border-radius: 20px; background-color: #FF4545; border-color: #FF4545;" href="grammar.html">Next: Grammar</a>
+          </div>
+                
+          
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

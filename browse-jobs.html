@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browse Jobs</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img src="assets/images/nms-logo.png" alt="Logo" />
+        </a>
+
+        <!-- Navbar Toggler for Mobile View -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse column-gap-4" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item mx-2">
+              <a class="nav-link p1" href="home.html">Home</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link p1" href="contact.html">Contact Us</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="btn btn-browse-jobs p1" href="browse-jobs.html">Browse Jobs</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero d-flex flex-column py-0" style="background-image: url('assets/images/hero-bg.png'); background-size: cover; background-position: center; height: 534px;">
+      <div class="container text-white">
+        <div class="row h-100">
+          <div class="margin col-lg-8 col-md-10 position-absolute top-50 start-0 translate-middle-y" style="width: 608px;">
+            <h1 class="text-black fw-bolder text-wrapper" style="font-size: 48px; padding-bottom: 12px;">Find the job that fits your lifestyle</h1>
+            <p class="text-black" style="opacity: 70%; padding-top: 12px; padding-bottom: 32px; font-size: 24px;">Lorem ipsum dolor sit amet. Ut voluptatum nostrum aut galisum accusamus ut fugiat architecto id sint doloremque.</p>
+            <a class="button text-white btn btn-hover fs-6" href="browse-jobs.html">Browse Jobs</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <!-- Content Section -->
+    <div class="wrapper">
+    <div class="job-top d-flex flex-row justify-content-between align-items-center pb-4">
+        <div class="left">
+            <h2 class="align-items-center">Jobs</h2>
+        </div>
+        <div class="right d-flex flex-row column-gap-2">
+                <div class="d-flex w-100 flex-row align-items-center border border-dark-subtle rounded-start-4 px-4 justify-content-start">
+                    <div class="search"><img src="assets/icons/search-icon.svg" alt="search"></div>
+                    <div><input type="text" placeholder="Search keywords, job position, etc." style="border-width: 0px;"></div>
+            </div>
+                
+                <div class="sort">
+                        <button class="btn btn-secondary dropdown-toggle border border-dark-subtle rounded-end-4 px-4" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                        style="background-color: white; color: rgb(68, 68, 68); border-width: 0px; border-radius: 0px;">
+                    Sort by
+                        </button>
+                        <ul class="dropdown-menu shadow-lg rounded-3 p-3" aria-labelledby="sortByButton">
+                            <li><a class="dropdown-item" href="#">Newest First</a></li>
+                            <li><a class="dropdown-item" href="#">Oldest First</a></li>
+                            <li><a class="dropdown-item" href="#">Highest Salary First</a></li>
+                            <li><a class="dropdown-item" href="#">Lowest Salary First</a></li>
+                            <li><a class="dropdown-item" href="#">Most Relevant</a></li>
+                            <li><a class="dropdown-item" href="#">A-Z by Job Title</a></li>
+                            <li><a class="dropdown-item" href="#">Z-A by Job Title</a></li>
+                            <li><a class="dropdown-item" href="#">A-Z by Company</a></li>
+                            <li><a class="dropdown-item" href="#">Z-A by Company</a></li>
+                        </ul>
+                </div>
+        </div>
+    </div>
+
+    <div class="main d-flex">
+        <div class="filters border border-dark-subtle rounded-4"> 
+            <h5 class="pb-3">Filters</h5>
+            <div class="job-type pb-4">
+                <div class="category">
+                    <p class="align-items-start">JOB TYPE</p>
+                    <div class="form-check  text-body-secondary">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label text-dark-secondary" for="defaultCheck1">
+                            Full-time
+                          </label> 
+                    </div>
+                    <div class="form-check  text-body-secondary">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Part-time
+                          </label> 
+                    </div>
+                    <div class="form-check  text-body-secondary">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Freelance
+                          </label> 
+                    </div>
+                </div>
+                </div>
+                <div class="work-setup pb-4">
+                        <p class="fs-6">WORK SETUP</p>
+                        <div class="form-check  text-body-secondary">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Office-based
+                              </label> 
+                        </div>
+                        <div class="form-check  text-body-secondary">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Home-based
+                              </label> 
+                        </div>
+                        <div class="form-check  text-body-secondary">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Hybrid
+                              </label> 
+                        </div>
+                    </div>
+                    <div class="date pb-4">
+                        <p class="fs-6">POSTED DATE</p>
+                        <div class="form-check  text-body-secondary">
+                            <input class="form-check-input color" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                24 hours ago
+                              </label> 
+                        </div>
+                        <div class="form-check  text-body-secondary">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Past week
+                              </label> 
+                        </div>
+                        <div class="form-check  text-body-secondary">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Past month
+                              </label> 
+                        </div>
+                    </div>
+                    <div class="history pb-4">
+                        <p class="fs-6">JOB HISTORY</p>
+                        <div class="form-check  text-body-secondary">
+                            <input class="form-check-input color" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Recently viewed
+                              </label> 
+                        </div>
+                        <div class="form-check  text-body-secondary">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Recently saved
+                              </label> 
+                        </div>
+                    </div>
+                    <div class="salary-range pb-4">
+                        <p class="fs-6">SALARY RANGE</p>
+                        <input type="range" class="form-range" id="salaryRange" min="0" max="100000" step="1000">
+                        <div class="d-flex justify-content-between">
+                            <span id="minSalary">₱0</span>
+                            <span id="maxSalary">₱100,000</span>
+                        </div>
+                    </div>
+    </div>
+    <div class="jobs">
+        <!-- Job Cards Grid -->
+  <div class="row row-cols-1 row-cols-md-2 g-4 w-auto"> <!-- Add g-4 for column gap -->
+    <!-- Job Card 1 -->
+    <div class="col">
+      <div class="card border border-dark-subtle rounded-4 shadow-sm">
+        <div class="card-body p-4">
+          <div class="top-card d-flex w-100 pb-3 justify-content-between">
+            <div class="left">
+              <h4 class="card-title fw-bold">Team Coach</h4>
+              <div class="tags d-flex">
+                <ul class="d-flex text-start column-gap-2">
+                  <li><a class="tag" href="#">Office-based</a></li>
+                  <li><a class="tag" href="#">Home-based</a></li>
+                  <li><a class="tag" href="#">Hybrid</a></li>
+                </ul>
+              </div>    
+            </div>
+            <div class="right d-flex flex-column align-items-end">
+              <div class="save">
+                <img src="assets/icons/save-icon.svg" alt="Save Icon" />
+              </div>
+              <p class="date-posted text-end" style="font-size: 12px; font-style: italic;">1 week ago</p>
+            </div>
+          </div>
+          <p class="card-text fw-light" style="color: #7F7F7F;">Lorem ipsum dolor sit amet. In aliquam natus et quis assumenda aut  repudiandae voluptate. Et vero earum non veniam</p>
+          <div class="bottom d-flex align-items-center justify-content-between">
+            <h4 class="salary">₱20,000 - ₱40,000/month</h4>
+            <a class="button text-white btn btn-hover fs-6" href="job-overview.html">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Job Card 2 -->
+    <div class="col">
+      <div class="card border border-dark-subtle rounded-4 shadow-sm">
+        <div class="card-body p-4">
+          <div class="top-card d-flex w-100 pb-3 justify-content-between">
+            <div class="left">
+              <h4 class="card-title fw-bold">Team Coach</h4>
+              <div class="tags d-flex">
+                <ul class="d-flex text-start column-gap-2">
+                  <li><a class="tag" href="#">Office-based</a></li>
+                  <li><a class="tag" href="#">Home-based</a></li>
+                  <li><a class="tag" href="#">Hybrid</a></li>
+                </ul>
+              </div>    
+            </div>
+            <div class="right d-flex flex-column align-items-end">
+              <div class="save">
+                <img src="assets/icons/save-icon.svg" alt="Save Icon" />
+              </div>
+              <p class="date-posted text-end" style="font-size: 12px; font-style: italic;">1 week ago</p>
+            </div>
+          </div>
+          <p class="card-text fw-light" style="color: #7F7F7F;">Lorem ipsum dolor sit amet. In aliquam natus et quis assumenda aut  repudiandae voluptate. Et vero earum non veniam</p>
+          <div class="bottom d-flex align-items-center justify-content-between">
+            <h4 class="salary">₱20,000 - ₱40,000/month</h4>
+            <a class="button text-white btn btn-hover fs-6" href="browse-jobs.html">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Job Card 3 -->
+    <div class="col">
+        <div class="card border border-dark-subtle rounded-4 shadow-sm">
+          <div class="card-body p-4">
+            <div class="top-card d-flex w-100 pb-3 justify-content-between">
+              <div class="left">
+                <h4 class="card-title fw-bold">Team Coach</h4>
+                <div class="tags d-flex">
+                  <ul class="d-flex text-start column-gap-2">
+                    <li><a class="tag" href="#">Office-based</a></li>
+                    <li><a class="tag" href="#">Home-based</a></li>
+                    <li><a class="tag" href="#">Hybrid</a></li>
+                  </ul>
+                </div>    
+              </div>
+              <div class="right d-flex flex-column align-items-end">
+                <div class="save">
+                  <img src="assets/icons/save-icon.svg" alt="Save Icon" />
+                </div>
+                <p class="date-posted text-end" style="font-size: 12px; font-style: italic;">1 week ago</p>
+              </div>
+            </div>
+            <p class="card-text fw-light" style="color: #7F7F7F;">Lorem ipsum dolor sit amet. In aliquam natus et quis assumenda aut  repudiandae voluptate. Et vero earum non veniam</p>
+            <div class="bottom d-flex align-items-center justify-content-between">
+              <h4 class="salary">₱20,000 - ₱40,000/month</h4>
+              <a class="button text-white btn btn-hover fs-6" href="browse-jobs.html">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Job Card 4 -->
+      <div class="col">
+        <div class="card border border-dark-subtle rounded-4 shadow-sm">
+          <div class="card-body p-4">
+            <div class="top-card d-flex w-100 pb-3 justify-content-between">
+              <div class="left">
+                <h4 class="card-title fw-bold">Team Coach</h4>
+                <div class="tags d-flex">
+                  <ul class="d-flex text-start column-gap-2">
+                    <li><a class="tag" href="#">Office-based</a></li>
+                    <li><a class="tag" href="#">Home-based</a></li>
+                    <li><a class="tag" href="#">Hybrid</a></li>
+                  </ul>
+                </div>    
+              </div>
+              <div class="right d-flex flex-column align-items-end">
+                <div class="save">
+                  <img src="assets/icons/save-icon.svg" alt="Save Icon" />
+                </div>
+                <p class="date-posted text-end" style="font-size: 12px; font-style: italic;">1 week ago</p>
+              </div>
+            </div>
+            <p class="card-text fw-light" style="color: #7F7F7F;">Lorem ipsum dolor sit amet. In aliquam natus et quis assumenda aut  repudiandae voluptate. Et vero earum non veniam</p>
+            <div class="bottom d-flex align-items-center justify-content-between">
+              <h4 class="salary">₱20,000 - ₱40,000/month</h4>
+              <a class="button text-white btn btn-hover fs-6" href="browse-jobs.html">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job Card 5 -->
+    <div class="col">
+        <div class="card border border-dark-subtle rounded-4 shadow-sm">
+          <div class="card-body p-4">
+            <div class="top-card d-flex w-100 pb-3 justify-content-between">
+              <div class="left">
+                <h4 class="card-title fw-bold">Team Coach</h4>
+                <div class="tags d-flex">
+                  <ul class="d-flex text-start column-gap-2">
+                    <li><a class="tag" href="#">Office-based</a></li>
+                    <li><a class="tag" href="#">Home-based</a></li>
+                    <li><a class="tag" href="#">Hybrid</a></li>
+                  </ul>
+                </div>    
+              </div>
+              <div class="right d-flex flex-column align-items-end">
+                <div class="save">
+                  <img src="assets/icons/save-icon.svg" alt="Save Icon" />
+                </div>
+                <p class="date-posted text-end" style="font-size: 12px; font-style: italic;">1 week ago</p>
+              </div>
+            </div>
+            <p class="card-text fw-light" style="color: #7F7F7F;">Lorem ipsum dolor sit amet. In aliquam natus et quis assumenda aut  repudiandae voluptate. Et vero earum non veniam</p>
+            <div class="bottom d-flex align-items-center justify-content-between">
+              <h4 class="salary">₱20,000 - ₱40,000/month</h4>
+              <a class="button text-white btn btn-hover fs-6" href="browse-jobs.html">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Job Card 6 -->
+      <div class="col">
+        <div class="card border border-dark-subtle rounded-4 shadow-sm">
+          <div class="card-body p-4">
+            <div class="top-card d-flex w-100 pb-3 justify-content-between">
+              <div class="left">
+                <h4 class="card-title fw-bold">Team Coach</h4>
+                <div class="tags d-flex">
+                  <ul class="d-flex text-start column-gap-2">
+                    <li><a class="tag" href="#">Office-based</a></li>
+                    <li><a class="tag" href="#">Home-based</a></li>
+                    <li><a class="tag" href="#">Hybrid</a></li>
+                  </ul>
+                </div>    
+              </div>
+              <div class="right d-flex flex-column align-items-end">
+                <div class="save">
+                  <img src="assets/icons/save-icon.svg" alt="Save Icon" />
+                </div>
+                <p class="date-posted text-end" style="font-size: 12px; font-style: italic;">1 week ago</p>
+              </div>
+            </div>
+            <p class="card-text fw-light" style="color: #7F7F7F;">Lorem ipsum dolor sit amet. In aliquam natus et quis assumenda aut  repudiandae voluptate. Et vero earum non veniam</p>
+            <div class="bottom d-flex align-items-center justify-content-between">
+              <h4 class="salary">₱20,000 - ₱40,000/month</h4>
+              <a class="button text-white btn btn-hover fs-6" href="browse-jobs.html">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job Card 7 -->
+    <div class="col">
+        <div class="card border border-dark-subtle rounded-4 shadow-sm">
+          <div class="card-body p-4">
+            <div class="top-card d-flex w-100 pb-3 justify-content-between">
+              <div class="left">
+                <h4 class="card-title fw-bold">Team Coach</h4>
+                <div class="tags d-flex">
+                  <ul class="d-flex text-start column-gap-2">
+                    <li><a class="tag" href="#">Office-based</a></li>
+                    <li><a class="tag" href="#">Home-based</a></li>
+                    <li><a class="tag" href="#">Hybrid</a></li>
+                  </ul>
+                </div>    
+              </div>
+              <div class="right d-flex flex-column align-items-end">
+                <div class="save">
+                  <img src="assets/icons/save-icon.svg" alt="Save Icon" />
+                </div>
+                <p class="date-posted text-end" style="font-size: 12px; font-style: italic;">1 week ago</p>
+              </div>
+            </div>
+            <p class="card-text fw-light" style="color: #7F7F7F;">Lorem ipsum dolor sit amet. In aliquam natus et quis assumenda aut  repudiandae voluptate. Et vero earum non veniam</p>
+            <div class="bottom d-flex align-items-center justify-content-between">
+              <h4 class="salary">₱20,000 - ₱40,000/month</h4>
+              <a class="button text-white btn btn-hover fs-6" href="browse-jobs.html">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Job Card 8 -->
+      <div class="col">
+        <div class="card border border-dark-subtle rounded-4 shadow-sm">
+          <div class="card-body p-4">
+            <div class="top-card d-flex w-100 pb-3 justify-content-between">
+              <div class="left">
+                <h4 class="card-title fw-bold">Team Coach</h4>
+                <div class="tags d-flex">
+                  <ul class="d-flex text-start column-gap-2">
+                    <li><a class="tag" href="#">Office-based</a></li>
+                    <li><a class="tag" href="#">Home-based</a></li>
+                    <li><a class="tag" href="#">Hybrid</a></li>
+                  </ul>
+                </div>    
+              </div>
+              <div class="right d-flex flex-column align-items-end">
+                <div class="save">
+                  <img src="assets/icons/save-icon.svg" alt="Save Icon" />
+                </div>
+                <p class="date-posted text-end" style="font-size: 12px; font-style: italic;">1 week ago</p>
+              </div>
+            </div>
+            <p class="card-text fw-light" style="color: #7F7F7F;">Lorem ipsum dolor sit amet. In aliquam natus et quis assumenda aut  repudiandae voluptate. Et vero earum non veniam</p>
+            <div class="bottom d-flex align-items-center justify-content-between">
+              <h4 class="salary">₱20,000 - ₱40,000/month</h4>
+              <a class="button text-white btn btn-hover fs-6" href="browse-jobs.html">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div>
+<!-- Pagination -->
+<nav aria-label="Job Pagination" class="mt-4">
+    <ul class="pagination justify-content-center">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&lt;</span>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">4</a></li>
+      <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+      <li class="page-item"><a class="page-link" href="#">100</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&gt;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+    </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+       <div class=" d-flex justify-content-between" style="padding: 100px; background-color: #0C0606;">
+        <div class="logo d-flex gap-4">
+            <div><img src="assets/icons/nms-logo-2.svg" alt="nms-logo"></div>
+            <p class="text-white">New Media Services Philippines, <br>we fearlessly pursue greatness.</p>
+        </div>
+        <div class="footer-right d-flex flex-column ms-auto">
+        <div class="quick-links d-flex gap-4 list-unstyled">
+            <ul class="footer-links list-unstyled d-flex justify-content-end">
+                <li class="me-3"><a href="#" class="text-decoration-none text-white">Home</a></li>
+                <li class="me-3"><a href="#" class="text-decoration-none text-white">Contact Us</a></li>
+                <li class="me-3"><a href="#" class="text-decoration-none text-white">Browse Jobs</a></li>
+            </ul>
+        </div>
+        <div class="socmed d-flex gap-2 justify-content-end">
+        <img src="assets/icons/facebook.svg" alt="">
+        <img src="assets/icons/insta.svg" alt="">
+        <img src="assets/icons/twtx.svg" alt="">
+        <img src="assets/icons/linkedin.svg" alt="">
+        </div>
+    </div>
+    </div>
+    <div class="bottom-footer d-flex justify-content-between" style="background-color: #0C0606; font-size: 12px; padding-left: 100px; padding-right: 100px; padding-top: 50px; padding-bottom: 20px;">
+        <p class="text-white">2025 New Media Services., All rights reserved.</p>
+        <div class="quick-links d-flex gap-4 list-unstyled">
+            <ul class="footer-links list-unstyled d-flex m-0">
+                <li class="me-3"><a href="#" class="text-decoration-none text-white">Terms of Service</a></li>
+                <li class="me-3"><a href="#" class="text-decoration-none text-white">Privacy Policy</a></li>
+                <li class="me-3"><a href="#" class="text-decoration-none text-white">Cookies Preferences</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
