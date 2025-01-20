@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Application</title>
     <!-- Bootstrap CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css" />
   </head>
@@ -38,60 +44,84 @@
               <a class="nav-link p1" href="contact.html">Contact Us</a>
             </li>
             <li class="nav-item mx-2">
-              <a class="btn btn-browse-jobs p1" href="browse-jobs.html">Browse Jobs</a>
+              <a class="btn btn-browse-jobs p1" href="browse-jobs.html"
+                >Browse Jobs</a
+              >
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div class="wrapper container-fluid d-flex" style="min-height: 100vh; gap: 24px;">
+    <div
+      class="wrapper container-fluid d-flex"
+      style="min-height: 100vh; gap: 24px"
+    >
       <!-- Left column (sidebar) -->
-      <div class="col-md-4 bg-light p-4" style="border-radius: 20px;">
+      <div class="col-md-4 bg-light p-5" style="border-radius: 20px">
         <h3>Application Process</h3>
         <ul class="list-unstyled">
           <li><strong>Step 1:</strong> Verify Identity</li>
           <li><strong>Step 2:</strong> Fill Application</li>
-          <li style="color: #FF4545;"><strong>Step 3:</strong> Assessment Test</li>
-
+          <li style="color: #ff4545">
+            <strong>Step 3:</strong> Assessment Test
+          </li>
         </ul>
       </div>
 
       <!-- Right column (application content) -->
-      <div class="col-md-7 d-flex flex-column p-5" style="border: 2px solid #FF4545; border-radius: 20px; padding: 20px;">
+      <div
+        class="col-md-7 d-flex flex-column p-5"
+        style="border: 2px solid #ff4545; border-radius: 20px; padding: 20px"
+      >
         <!-- Step 2: Pre-Screening -->
         <div id="step-2">
           <h3>Step 3 of 3: Assessment Test</h3>
 
           <div class="mb-4">
-            <p>Please write a minimum of 250 words on the following topic. Take your time to craft your response.</p>
-            <h6>Topic: Describe your most significant professional achievement and how you contributed to its success.</h6>
-      
+            <p>
+              Please write a minimum of 250 words on the following topic. Take
+              your time to craft your response.
+            </p>
+            <h6>
+              Topic: Describe your most significant professional achievement and
+              how you contributed to its success.
+            </h6>
+
             <!-- Essay Text Area -->
             <div class="mb-3">
               <label for="essay-textarea" class="form-label"></label>
-              <textarea class="form-control" id="essay-textarea" rows="6" placeholder="Type your answer here..." required></textarea>
+              <textarea
+                class="form-control"
+                id="essay-textarea"
+                rows="6"
+                placeholder="Type your answer here..."
+                required
+              ></textarea>
             </div>
-      
+
             <!-- Word Count Display -->
             <div class="d-flex justify-content-end">
               <span class="word-count" id="word-count">0/250 words</span>
             </div>
           </div>
         </div>
-      
+
         <!-- Add JavaScript for Word Count -->
         <script>
-          const essayTextarea = document.getElementById('essay-textarea');
-          const wordCountDisplay = document.getElementById('word-count');
-          const submitButton = document.getElementById('submit-button');
-      
+          const essayTextarea = document.getElementById("essay-textarea");
+          const wordCountDisplay = document.getElementById("word-count");
+          const submitButton = document.getElementById("submit-button");
+
           // Function to update word count
           function updateWordCount() {
-            const words = essayTextarea.value.trim().split(/\s+/).filter(Boolean);
+            const words = essayTextarea.value
+              .trim()
+              .split(/\s+/)
+              .filter(Boolean);
             const wordCount = words.length;
             wordCountDisplay.textContent = `${wordCount}/250 words`;
-      
+
             // Enable or disable submit button based on word count
             if (wordCount >= 250) {
               submitButton.disabled = false;
@@ -99,17 +129,93 @@
               submitButton.disabled = true;
             }
           }
-      
+
           // Event listener for text input
-          essayTextarea.addEventListener('input', updateWordCount);
+          essayTextarea.addEventListener("input", updateWordCount);
         </script>
-                
-                                <!-- Next Button -->
-          <div class="text-center mt-4">
-            <a class="btn btn-primary" style="border-radius: 20px; background-color: #FF4545; border-color: #FF4545;" href="grammar.html">Next: Grammar</a>
-          </div>
-                
-          
+
+        <!-- Next Button -->
+        <div class="text-center mt-4">
+          <a
+            class="btn btn-primary"
+            style="
+              border-radius: 20px;
+              background-color: #ff4545;
+              border-color: #ff4545;
+              padding: 16px;
+            "
+            href="grammar.html"
+            >Next: Grammar</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div
+      class="d-flex justify-content-between"
+      style="padding: 100px; background-color: #0c0606"
+    >
+      <div class="logo d-flex gap-4">
+        <div><img src="assets/icons/nms-logo-2.svg" alt="nms-logo" /></div>
+        <p class="text-white">
+          New Media Services Philippines, <br />we fearlessly pursue greatness.
+        </p>
+      </div>
+      <div class="footer-right d-flex flex-column ms-auto">
+        <div class="quick-links d-flex gap-4 list-unstyled">
+          <ul class="footer-links list-unstyled d-flex justify-content-end">
+            <li class="me-3">
+              <a href="#" class="text-decoration-none text-white">Home</a>
+            </li>
+            <li class="me-3">
+              <a href="#" class="text-decoration-none text-white">Contact Us</a>
+            </li>
+            <li class="me-3">
+              <a href="#" class="text-decoration-none text-white"
+                >Browse Jobs</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="socmed d-flex gap-2 justify-content-end">
+          <img src="assets/icons/facebook.svg" alt="" />
+          <img src="assets/icons/insta.svg" alt="" />
+          <img src="assets/icons/twtx.svg" alt="" />
+          <img src="assets/icons/linkedin.svg" alt="" />
+        </div>
+      </div>
+    </div>
+    <div
+      class="bottom-footer d-flex justify-content-between"
+      style="
+        background-color: #0c0606;
+        font-size: 12px;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 50px;
+        padding-bottom: 20px;
+      "
+    >
+      <p class="text-white">2025 New Media Services., All rights reserved.</p>
+      <div class="quick-links d-flex gap-4 list-unstyled">
+        <ul class="footer-links list-unstyled d-flex m-0">
+          <li class="me-3">
+            <a href="#" class="text-decoration-none text-white"
+              >Terms of Service</a
+            >
+          </li>
+          <li class="me-3">
+            <a href="#" class="text-decoration-none text-white"
+              >Privacy Policy</a
+            >
+          </li>
+          <li class="me-3">
+            <a href="#" class="text-decoration-none text-white"
+              >Cookies Preferences</a
+            >
+          </li>
+        </ul>
       </div>
     </div>
 

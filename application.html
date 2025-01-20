@@ -5,17 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Application</title>
     <!-- Bootstrap CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg">
-      <div class="container">
+    <nav
+      class="navbar sticky-top navbar-expand-lg"
+      style="background-color: white; max-width: full"
+    >
+      <div class="container-fluid">
         <!-- Logo -->
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="#" style="margin-left: 100px">
           <img src="assets/images/nms-logo.png" alt="Logo" />
         </a>
 
@@ -33,8 +42,12 @@
         </button>
 
         <!-- Navbar Links -->
-        <div class="collapse navbar-collapse column-gap-4" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
+        <div
+          class="collapse navbar-collapse column-gap-4"
+          id="navbarNav"
+          style="margin-right: 100px"
+        >
+          <ul class="navbar-nav ms-auto align-items-center">
             <li class="nav-item mx-2">
               <a class="nav-link p1" href="home.html">Home</a>
             </li>
@@ -42,38 +55,57 @@
               <a class="nav-link p1" href="contact.html">Contact Us</a>
             </li>
             <li class="nav-item mx-2">
-              <a class="btn btn-browse-jobs p1" href="browse-jobs.html">Browse Jobs</a>
+              <a class="btn btn-browse-jobs p1" href="browse-jobs.html"
+                >Browse Jobs</a
+              >
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div class="wrapper container-fluid d-flex" style="min-height: 100vh; gap: 24px;"> <!-- Added gap between columns -->
+    <div
+      class="wrapper container-fluid d-flex"
+      style="min-height: 100vh; gap: 24px"
+    >
+      <!-- Added gap between columns -->
       <!-- Left column (sidebar) -->
-      <div class="col-md-4 bg-light p-4" style="border-radius: 20px;">
+      <div class="col-md-4 bg-light p-5" style="border-radius: 20px">
         <h3>Application Process</h3>
         <ul class="list-unstyled">
-          <li style="color: #FF4545;"><strong>Step 1:</strong> Verify Identity</li>
+          <li style="color: #ff4545">
+            <strong>Step 1:</strong> Verify Identity
+          </li>
           <li><strong>Step 2:</strong> Fill Application</li>
           <li><strong>Step 3:</strong> Assessment Test</li>
         </ul>
       </div>
 
       <!-- Right column (application content) -->
-      <div class="col-md-7 d-flex flex-column p-5" style="border: 2px solid #FF4545; border-radius: 20px; padding: 20px;">
+      <div
+        class="col-md-7 d-flex flex-column p-5"
+        style="border: 2px solid #ff4545; border-radius: 20px; padding: 20px"
+      >
         <!-- Step 1: Verify Identity -->
         <div id="step-1">
           <h3>Step 1 of 3: Verify Identity</h3>
 
           <!-- Section I: Upload Government-Issued ID -->
           <div class="mb-4">
-            <h5>Please upload a clear image of your government-issued ID to verify your identity.</h5>
+            <h5>
+              Please upload a clear image of your government-issued ID to verify
+              your identity.
+            </h5>
             <div class="upload-box">
               <label for="upload-id" class="form-label">
                 <i class="bi bi-plus-circle"></i> Upload ID
               </label>
-              <input type="file" id="upload-id" accept=".jpg, .png, .pdf" class="form-control-file">
+              <input
+                type="file"
+                id="upload-id"
+                accept=".jpg, .png, .pdf"
+                class="form-control-file"
+              />
               <small class="form-text text-muted">
                 Supported file types: JPG, PNG, PDF (Max size: 5MB)
               </small>
@@ -83,19 +115,108 @@
           <!-- Section II: Digital Signature -->
           <div class="mb-4">
             <h5>Please provide your signature to confirm your application.</h5>
-            <p>Sign within the box below using your mouse, stylus, or touch screen.</p>
+            <p>
+              Sign within the box below using your mouse, stylus, or touch
+              screen.
+            </p>
 
             <div class="signature-box">
               <canvas id="signature-canvas"></canvas>
-              <button type="button" class="btn btn-secondary" style="border-radius: 20px;" id="undo-signature">Undo</button>
+              <button
+                type="button"
+                class="btn"
+                style="border-radius: 20px; color: rgb(101, 101, 101)"
+                id="undo-signature"
+              >
+                Undo
+              </button>
             </div>
           </div>
 
           <!-- Next Button -->
           <div class="text-center mt-4">
-            <a class="btn btn-primary" style="border-radius: 20px; background-color: #FF4545; border-color: #FF4545;" id="nextButton" href="application2.html">Next Step</a>
+            <a
+              class="btn btn-primary"
+              style="
+                border-radius: 20px;
+                background-color: #ff4545;
+                border-color: #ff4545;
+                padding: 16px;
+              "
+              id="nextButton"
+              href="application2.html"
+              >Next Step</a
+            >
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div
+      class="d-flex justify-content-between"
+      style="padding: 100px; background-color: #0c0606"
+    >
+      <div class="logo d-flex gap-4">
+        <div><img src="assets/icons/nms-logo-2.svg" alt="nms-logo" /></div>
+        <p class="text-white">
+          New Media Services Philippines, <br />we fearlessly pursue greatness.
+        </p>
+      </div>
+      <div class="footer-right d-flex flex-column ms-auto">
+        <div class="quick-links d-flex gap-4 list-unstyled">
+          <ul class="footer-links list-unstyled d-flex justify-content-end">
+            <li class="me-3">
+              <a href="#" class="text-decoration-none text-white">Home</a>
+            </li>
+            <li class="me-3">
+              <a href="#" class="text-decoration-none text-white">Contact Us</a>
+            </li>
+            <li class="me-3">
+              <a href="#" class="text-decoration-none text-white"
+                >Browse Jobs</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="socmed d-flex gap-2 justify-content-end">
+          <img src="assets/icons/facebook.svg" alt="" />
+          <img src="assets/icons/insta.svg" alt="" />
+          <img src="assets/icons/twtx.svg" alt="" />
+          <img src="assets/icons/linkedin.svg" alt="" />
+        </div>
+      </div>
+    </div>
+    <div
+      class="bottom-footer d-flex justify-content-between"
+      style="
+        background-color: #0c0606;
+        font-size: 12px;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 50px;
+        padding-bottom: 20px;
+      "
+    >
+      <p class="text-white">2025 New Media Services., All rights reserved.</p>
+      <div class="quick-links d-flex gap-4 list-unstyled">
+        <ul class="footer-links list-unstyled d-flex m-0">
+          <li class="me-3">
+            <a href="#" class="text-decoration-none text-white"
+              >Terms of Service</a
+            >
+          </li>
+          <li class="me-3">
+            <a href="#" class="text-decoration-none text-white"
+              >Privacy Policy</a
+            >
+          </li>
+          <li class="me-3">
+            <a href="#" class="text-decoration-none text-white"
+              >Cookies Preferences</a
+            >
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -104,10 +225,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
     <script>
-
       // Set up signature canvas (for design purposes)
-      const canvas = document.getElementById('signature-canvas');
-      const ctx = canvas.getContext('2d');
+      const canvas = document.getElementById("signature-canvas");
+      const ctx = canvas.getContext("2d");
       let drawing = false;
 
       // Set canvas size
@@ -115,10 +235,10 @@
       canvas.height = 150;
 
       // Drawing function
-      canvas.addEventListener('mousedown', startDrawing);
-      canvas.addEventListener('mousemove', draw);
-      canvas.addEventListener('mouseup', stopDrawing);
-      canvas.addEventListener('mouseout', stopDrawing);
+      canvas.addEventListener("mousedown", startDrawing);
+      canvas.addEventListener("mousemove", draw);
+      canvas.addEventListener("mouseup", stopDrawing);
+      canvas.addEventListener("mouseout", stopDrawing);
 
       function startDrawing(event) {
         drawing = true;
@@ -128,10 +248,13 @@
       function draw(event) {
         if (!drawing) return;
         ctx.lineWidth = 2;
-        ctx.lineCap = 'round';
-        ctx.strokeStyle = '#000';
+        ctx.lineCap = "round";
+        ctx.strokeStyle = "#000";
 
-        ctx.lineTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+        ctx.lineTo(
+          event.clientX - canvas.offsetLeft,
+          event.clientY - canvas.offsetTop
+        );
         ctx.stroke();
       }
 
@@ -140,8 +263,8 @@
       }
 
       // Undo the signature drawing
-      const undoButton = document.getElementById('undo-signature');
-      undoButton.addEventListener('click', () => {
+      const undoButton = document.getElementById("undo-signature");
+      undoButton.addEventListener("click", () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
       });
     </script>

@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Application 2</title>
     <!-- Bootstrap CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css" />
   </head>
@@ -42,26 +48,37 @@
               <a class="nav-link p1" href="contact.html">Contact Us</a>
             </li>
             <li class="nav-item mx-2">
-              <a class="btn btn-browse-jobs p1" href="browse-jobs.html">Browse Jobs</a>
+              <a class="btn btn-browse-jobs p1" href="browse-jobs.html"
+                >Browse Jobs</a
+              >
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div class="wrapper container-fluid d-flex" style="min-height: 100vh; gap: 24px;"> <!-- Added gap between columns -->
+    <div
+      class="wrapper container-fluid d-flex"
+      style="min-height: 100vh; gap: 24px"
+    >
+      <!-- Added gap between columns -->
       <!-- Left column (sidebar) -->
-      <div class="col-md-4 bg-light p-4" style="border-radius: 20px;">
+      <div class="col-md-4 bg-light p-5" style="border-radius: 20px">
         <h3>Application Process</h3>
         <ul class="list-unstyled">
           <li><strong>Step 1:</strong> Verify Identity</li>
-          <li style="color: #FF4545;"><strong>Step 2:</strong> Fill Application</li>
+          <li style="color: #ff4545">
+            <strong>Step 2:</strong> Fill Application
+          </li>
           <li><strong>Step 3:</strong> Assessment Test</li>
         </ul>
       </div>
 
       <!-- Right column (application content) -->
-      <div class="col-md-7 d-flex flex-column p-5" style="border: 2px solid #FF4545; border-radius: 20px; padding: 20px;">
+      <div
+        class="col-md-7 d-flex flex-column p-5"
+        style="border: 2px solid #ff4545; border-radius: 20px; padding: 20px"
+      >
         <!-- Step 2: Application Form -->
         <div id="step-2">
           <h3>Step 2 of 3: Application Form</h3>
@@ -71,31 +88,40 @@
           <div class="row">
             <div class="col-md-6 mb-3">
               <label for="first-name" class="form-label">First Name</label>
-              <input type="text" class="form-control" id="first-name" required>
+              <input
+                type="text"
+                class="form-control"
+                id="first-name"
+                required
+              />
             </div>
             <div class="col-md-6 mb-3">
-              <label for="middle-name" class="form-label">Middle Name (optional)</label>
-              <input type="text" class="form-control" id="middle-name">
+              <label for="middle-name" class="form-label"
+                >Middle Name (optional)</label
+              >
+              <input type="text" class="form-control" id="middle-name" />
             </div>
             <div class="col-md-6 mb-3">
               <label for="last-name" class="form-label">Last Name</label>
-              <input type="text" class="form-control" id="last-name" required>
+              <input type="text" class="form-control" id="last-name" required />
             </div>
             <div class="col-md-6 mb-3">
-              <label for="suffix" class="form-label">Suffix (e.g., Jr., Sr., III)</label>
-              <input type="text" class="form-control" id="suffix">
+              <label for="suffix" class="form-label"
+                >Suffix (e.g., Jr., Sr., III)</label
+              >
+              <input type="text" class="form-control" id="suffix" />
             </div>
             <div class="col-md-6 mb-3">
               <label for="email" class="form-label">Email Address</label>
-              <input type="email" class="form-control" id="email" required>
+              <input type="email" class="form-control" id="email" required />
             </div>
             <div class="col-md-6 mb-3">
               <label for="phone" class="form-label">Phone Number</label>
-              <input type="text" class="form-control" id="phone" required>
+              <input type="text" class="form-control" id="phone" required />
             </div>
             <div class="col-md-6 mb-3">
               <label for="address" class="form-label">Home Address</label>
-              <input type="text" class="form-control" id="address" required>
+              <input type="text" class="form-control" id="address" required />
             </div>
             <div class="col-md-6 mb-3">
               <label for="country" class="form-label">Country/Region</label>
@@ -120,15 +146,27 @@
             </div>
             <div class="col-md-6 mb-3">
               <label for="postal-code" class="form-label">Postal Code</label>
-              <input type="text" class="form-control" id="postal-code" required>
+              <input
+                type="text"
+                class="form-control"
+                id="postal-code"
+                required
+              />
             </div>
             <div class="col-md-6 mb-3">
               <label for="nationality" class="form-label">Nationality</label>
-              <input type="text" class="form-control" id="nationality" required>
+              <input
+                type="text"
+                class="form-control"
+                id="nationality"
+                required
+              />
             </div>
             <div class="col-md-6 mb-3">
-              <label for="languages" class="form-label">Languages Written/Spoken</label>
-              <input type="text" class="form-control" id="languages" required>
+              <label for="languages" class="form-label"
+                >Languages Written/Spoken</label
+              >
+              <input type="text" class="form-control" id="languages" required />
             </div>
           </div>
 
@@ -136,7 +174,9 @@
           <h5>II. Employment Information</h5>
           <div class="row">
             <div class="col-md-6 mb-3">
-              <label for="work-setup" class="form-label">Preferred Work Setup</label>
+              <label for="work-setup" class="form-label"
+                >Preferred Work Setup</label
+              >
               <select class="form-control" id="work-setup" required>
                 <option>Choose Setup</option>
                 <option>Remote</option>
@@ -145,7 +185,9 @@
               </select>
             </div>
             <div class="col-md-6 mb-3">
-              <label for="job-type" class="form-label">Preferred Job Type</label>
+              <label for="job-type" class="form-label"
+                >Preferred Job Type</label
+              >
               <select class="form-control" id="job-type" required>
                 <option>Choose Job Type</option>
                 <option>Full-time</option>
@@ -154,14 +196,24 @@
               </select>
             </div>
             <div class="col-md-6 mb-3">
-              <label for="availability-month" class="form-label">Availability to Start Work</label>
+              <label for="availability-month" class="form-label"
+                >Availability to Start Work</label
+              >
               <div class="d-flex">
-                <select class="form-control me-2" id="availability-month" required>
+                <select
+                  class="form-control me-2"
+                  id="availability-month"
+                  required
+                >
                   <option>Month</option>
                   <option>January</option>
                   <option>February</option>
                 </select>
-                <select class="form-control me-2" id="availability-day" required>
+                <select
+                  class="form-control me-2"
+                  id="availability-day"
+                  required
+                >
                   <option>Day</option>
                   <option>1</option>
                   <option>2</option>
@@ -178,15 +230,95 @@
           <!-- Section III: Resume -->
           <h5>III. Resume</h5>
           <div class="mb-4">
-            <label for="resume" class="form-label">Please attach your resume</label>
-            <input type="file" class="form-control" id="resume" required>
+            <label for="resume" class="form-label"
+              >Please attach your resume</label
+            >
+            <input type="file" class="form-control" id="resume" required />
           </div>
 
           <!-- Next Button -->
           <div class="text-center mt-4">
-            <a class="btn btn-primary" style="border-radius: 20px; background-color: #FF4545; border-color: #FF4545;" href="application3.html">Next Step</a>
+            <a
+              class="btn btn-primary"
+              style="
+                border-radius: 20px;
+                background-color: #ff4545;
+                border-color: #ff4545;
+                padding: 16px;
+              "
+              href="application3.html"
+              >Next Step</a
+            >
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div
+      class="d-flex justify-content-between"
+      style="padding: 100px; background-color: #0c0606"
+    >
+      <div class="logo d-flex gap-4">
+        <div><img src="assets/icons/nms-logo-2.svg" alt="nms-logo" /></div>
+        <p class="text-white">
+          New Media Services Philippines, <br />we fearlessly pursue greatness.
+        </p>
+      </div>
+      <div class="footer-right d-flex flex-column ms-auto">
+        <div class="quick-links d-flex gap-4 list-unstyled">
+          <ul class="footer-links list-unstyled d-flex justify-content-end">
+            <li class="me-3">
+              <a href="#" class="text-decoration-none text-white">Home</a>
+            </li>
+            <li class="me-3">
+              <a href="#" class="text-decoration-none text-white">Contact Us</a>
+            </li>
+            <li class="me-3">
+              <a href="#" class="text-decoration-none text-white"
+                >Browse Jobs</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="socmed d-flex gap-2 justify-content-end">
+          <img src="assets/icons/facebook.svg" alt="" />
+          <img src="assets/icons/insta.svg" alt="" />
+          <img src="assets/icons/twtx.svg" alt="" />
+          <img src="assets/icons/linkedin.svg" alt="" />
+        </div>
+      </div>
+    </div>
+    <div
+      class="bottom-footer d-flex justify-content-between"
+      style="
+        background-color: #0c0606;
+        font-size: 12px;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 50px;
+        padding-bottom: 20px;
+      "
+    >
+      <p class="text-white">2025 New Media Services., All rights reserved.</p>
+      <div class="quick-links d-flex gap-4 list-unstyled">
+        <ul class="footer-links list-unstyled d-flex m-0">
+          <li class="me-3">
+            <a href="#" class="text-decoration-none text-white"
+              >Terms of Service</a
+            >
+          </li>
+          <li class="me-3">
+            <a href="#" class="text-decoration-none text-white"
+              >Privacy Policy</a
+            >
+          </li>
+          <li class="me-3">
+            <a href="#" class="text-decoration-none text-white"
+              >Cookies Preferences</a
+            >
+          </li>
+        </ul>
       </div>
     </div>
 

@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Application</title>
     <!-- Bootstrap CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css" />
   </head>
@@ -38,27 +44,36 @@
               <a class="nav-link p1" href="contact.html">Contact Us</a>
             </li>
             <li class="nav-item mx-2">
-              <a class="btn btn-browse-jobs p1" href="browse-jobs.html">Browse Jobs</a>
+              <a class="btn btn-browse-jobs p1" href="browse-jobs.html"
+                >Browse Jobs</a
+              >
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div class="wrapper container-fluid d-flex" style="min-height: 100vh; gap: 24px;">
+    <div
+      class="wrapper container-fluid d-flex"
+      style="min-height: 100vh; gap: 24px"
+    >
       <!-- Left column (sidebar) -->
-      <div class="col-md-4 bg-light p-4" style="border-radius: 20px;">
+      <div class="col-md-4 bg-light p-5" style="border-radius: 20px">
         <h3>Application Process</h3>
         <ul class="list-unstyled">
           <li><strong>Step 1:</strong> Verify Identity</li>
           <li><strong>Step 2:</strong> Fill Application</li>
-          <li style="color: #FF4545;"><strong>Step 3:</strong> Assessment Test</li>
-
+          <li style="color: #ff4545">
+            <strong>Step 3:</strong> Assessment Test
+          </li>
         </ul>
       </div>
 
       <!-- Right column (application content) -->
-      <div class="col-md-7 d-flex flex-column p-5" style="border: 2px solid #FF4545; border-radius: 20px; padding: 20px;">
+      <div
+        class="col-md-7 d-flex flex-column p-5"
+        style="border: 2px solid #ff4545; border-radius: 20px; padding: 20px"
+      >
         <!-- Step 2: Pre-Screening -->
         <div id="step-2">
           <h3>Step 3 of 3: Assessment Test</h3>
@@ -69,51 +84,80 @@
               <!-- Question 1 -->
               <p>1. Are you currently employed?</p>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="q1" id="q1-yes" />
-                <label class="form-check-label" for="q1-yes">
-                  Yes
-                </label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q1"
+                  id="q1-yes"
+                />
+                <label class="form-check-label" for="q1-yes"> Yes </label>
               </div>
               <div class="form-check pb-3">
-                <input class="form-check-input" type="radio" name="q1" id="q1-no" />
-                <label class="form-check-label" for="q1-no">
-                  No
-                </label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q1"
+                  id="q1-no"
+                />
+                <label class="form-check-label" for="q1-no"> No </label>
               </div>
-          
+
               <!-- Question 2 -->
               <div class="mb-3">
-                <label for="q2" class="form-label">2. How did you hear about this job opening?</label>
-                <select class="form-select" id="q2" aria-label="How did you hear about this job opening">
+                <label for="q2" class="form-label"
+                  >2. How did you hear about this job opening?</label
+                >
+                <select
+                  class="form-select"
+                  id="q2"
+                  aria-label="How did you hear about this job opening"
+                >
                   <option value="" selected>-- Select --</option>
-                  <option value="job-board">Job Board (e.g., LinkedIn, Indeed)</option>
+                  <option value="job-board">
+                    Job Board (e.g., LinkedIn, Indeed)
+                  </option>
                   <option value="referred">Referred by Employee</option>
                   <option value="company-website">Company Website</option>
-                  <option value="social-media">Social Media (e.g., Facebook, Twitter)</option>
+                  <option value="social-media">
+                    Social Media (e.g., Facebook, Twitter)
+                  </option>
                   <option value="recruitment-agency">Recruitment Agency</option>
                   <option value="other">Other (Please specify)</option>
                 </select>
               </div>
-          
+
               <!-- Question 3 -->
               <p>3. Are you available to start within the next 30 days?</p>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="q3" id="q3-yes" />
-                <label class="form-check-label" for="q3-yes">
-                  Yes
-                </label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q3"
+                  id="q3-yes"
+                />
+                <label class="form-check-label" for="q3-yes"> Yes </label>
               </div>
               <div class="form-check pb-3">
-                <input class="form-check-input" type="radio" name="q3" id="q3-no" />
-                <label class="form-check-label" for="q3-no">
-                  No
-                </label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q3"
+                  id="q3-no"
+                />
+                <label class="form-check-label" for="q3-no"> No </label>
               </div>
-          
+
               <!-- Question 4 -->
               <div class="mb-3">
-                <label for="q4" class="form-label">4. How many hours per week can you commit to this position?</label>
-                <select class="form-select" id="q4" aria-label="How many hours per week can you commit?">
+                <label for="q4" class="form-label"
+                  >4. How many hours per week can you commit to this
+                  position?</label
+                >
+                <select
+                  class="form-select"
+                  id="q4"
+                  aria-label="How many hours per week can you commit?"
+                >
                   <option value="" selected>-- Select --</option>
                   <option value="20-or-less">20 hours or less</option>
                   <option value="21-to-30">21 to 30 hours</option>
@@ -121,31 +165,116 @@
                   <option value="41-or-more">41 hours or more</option>
                 </select>
               </div>
-          
+
               <!-- Question 5 -->
-               <p>5. Do you have experience with technology related to the job you’re applying for?</p>
+              <p>
+                5. Do you have experience with technology related to the job
+                you’re applying for?
+              </p>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="q5" id="q5-yes" />
-                <label class="form-check-label" for="q5-yes">
-                  Yes
-                </label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q5"
+                  id="q5-yes"
+                />
+                <label class="form-check-label" for="q5-yes"> Yes </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="q5" id="q5-no" />
-                <label class="form-check-label" for="q5-no">
-                  No
-                </label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q5"
+                  id="q5-no"
+                />
+                <label class="form-check-label" for="q5-no"> No </label>
               </div>
             </form>
           </div>
-          
-          
-          
+
           <!-- Next Button -->
           <div class="text-center mt-4">
-            <a class="btn btn-primary" style="border-radius: 20px; background-color: #FF4545; border-color: #FF4545;" href="typing-speed.html">Next: Typing Speed</a>
+            <a
+              class="btn btn-primary"
+              style="
+                border-radius: 20px;
+                background-color: #ff4545;
+                border-color: #ff4545;
+                padding: 16px;
+              "
+              href="typing-speed.html"
+              >Next: Typing Speed</a
+            >
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div
+      class="d-flex justify-content-between"
+      style="padding: 100px; background-color: #0c0606"
+    >
+      <div class="logo d-flex gap-4">
+        <div><img src="assets/icons/nms-logo-2.svg" alt="nms-logo" /></div>
+        <p class="text-white">
+          New Media Services Philippines, <br />we fearlessly pursue greatness.
+        </p>
+      </div>
+      <div class="footer-right d-flex flex-column ms-auto">
+        <div class="quick-links d-flex gap-4 list-unstyled">
+          <ul class="footer-links list-unstyled d-flex justify-content-end">
+            <li class="me-3">
+              <a href="#" class="text-decoration-none text-white">Home</a>
+            </li>
+            <li class="me-3">
+              <a href="#" class="text-decoration-none text-white">Contact Us</a>
+            </li>
+            <li class="me-3">
+              <a href="#" class="text-decoration-none text-white"
+                >Browse Jobs</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="socmed d-flex gap-2 justify-content-end">
+          <img src="assets/icons/facebook.svg" alt="" />
+          <img src="assets/icons/insta.svg" alt="" />
+          <img src="assets/icons/twtx.svg" alt="" />
+          <img src="assets/icons/linkedin.svg" alt="" />
+        </div>
+      </div>
+    </div>
+    <div
+      class="bottom-footer d-flex justify-content-between"
+      style="
+        background-color: #0c0606;
+        font-size: 12px;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 50px;
+        padding-bottom: 20px;
+      "
+    >
+      <p class="text-white">2025 New Media Services., All rights reserved.</p>
+      <div class="quick-links d-flex gap-4 list-unstyled">
+        <ul class="footer-links list-unstyled d-flex m-0">
+          <li class="me-3">
+            <a href="#" class="text-decoration-none text-white"
+              >Terms of Service</a
+            >
+          </li>
+          <li class="me-3">
+            <a href="#" class="text-decoration-none text-white"
+              >Privacy Policy</a
+            >
+          </li>
+          <li class="me-3">
+            <a href="#" class="text-decoration-none text-white"
+              >Cookies Preferences</a
+            >
+          </li>
+        </ul>
       </div>
     </div>
 
