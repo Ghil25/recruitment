@@ -1,0 +1,118 @@
+
+    body {
+      font-family: "Roboto", sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    /* Sidebar styles */
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #FF4545;
+      color: white;
+      z-index: 1000;
+      transition: width 0.3s;
+    }
+
+    .sidebar .nav-link {
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      border-bottom: .5px solid #ffffff;
+    }
+
+    .sidebar .nav-link:hover {
+      background-color: #495057;
+    }
+
+    .sidebar .logo-container {
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      border-bottom: .5px solid #ffffff;
+    }
+
+    .sidebar .logo-container img {
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .top-nav {
+      position: fixed;
+      top: 0;
+      left: 250px;
+      width: calc(100% - 250px);
+      height: 70px;
+      background-color: #e8e8e8;
+      color: black;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    .welcome-message {
+      font-size: 1.5rem;
+      font-weight: normal;
+      color: #FF4545;
+    }
+
+    .date-text {
+      font-size: 14px;
+      color: #888;
+    }
+
+    /* Main content styles */
+    .main-content {
+      margin-left: 250px;
+      padding: 20px;
+      margin-top: 70px;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .table th, .table td {
+      text-align: center;
+    }
+
+    .table th {
+      background-color: #f1f1f1;
+    }
+
+    .btn-primary {
+      background-color: #FF4545;
+      border-color: #FF4545;
+    }
+
+    /* Additional Styles */
+    .stats-card .card-body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .chart-container {
+      display: flex;
+      gap: 30px;
+    }
+    .chart {
+      flex: 1;
+    }
+
+    /* Funnel Section */
+    .funnel-section {
+      width: 30%;
+      padding: 10px;
+    }
+

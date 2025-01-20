@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Applicants</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/admin-styles.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="logo-container">
+      <img src="assets/images/nms-white.png" alt="Logo">
+    </div>
+    <nav class="nav flex-column">
+      <a href="admin-dashboard.html" class="nav-link">
+        <img src="assets/icons/dashboard.svg" alt="Dashboard Icon" style="width: 20px; height: 20px;">
+        <span>Dashboard</span>
+      </a>
+      <a href="admin-applicants.html" class="nav-link active">
+        <img src="assets/icons/applicant.svg" alt="Applicants Icon" style="width: 20px; height: 20px;">
+        <span>Applicants</span>
+      </a>
+      <a href="admin-jobs.html" class="nav-link">
+        <img src="assets/icons/jobs.svg" alt="Applicants Icon" style="width: 20px; height: 20px;">
+        <span>Jobs</span>
+      </a>
+      <a href="admin-sa.html" class="nav-link">
+        <img src="assets/icons/calendar.svg" alt="Calendar Icon" style="width: 20px; height: 20px;">
+        <span>Calendar</span>
+      </a>
+      <a href="" class="nav-link">
+        <img src="assets/icons/studio-acc.svg" alt="Studio Icon" style="width: 20px; height: 20px;">
+        <span>Studio Accounts</span>
+      </a>
+      <a href="admin.html" class="nav-link">
+        <img src="assets/icons/logout.svg" alt="Logout Icon" style="width: 20px; height: 20px;">
+        <span>Logout</span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- Top Navbar -->
+  <div class="top-nav">
+    <div>
+      <div class="welcome-message">
+        Welcome, Jisoo Kim!
+      </div>
+      <div class="date-text">
+        January 22, 2025
+      </div>
+    </div>
+    <div class="nav-icons d-flex align-items-center">
+      <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Account">
+        <img src="assets/images/jisoo.png" alt="Profile" style="width: 32px; height: 32px; border-radius: 50%;"/>
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Content (Applicants List) -->
+  <div class="main-content">
+    <div class="row mb-4">
+      <div class="col-md-12">
+        <div class="card shadow-sm rounded">
+          <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
+            <h5 class="card-title m-0">Jobs</h5>
+            <div class="d-flex align-items-center">
+              <input type="text" class="form-control me-3" placeholder="Search Jobs">
+              <button class="btn btn-secondary dropdown-toggle me-3" type="button" data-bs-toggle="dropdown">All Industries</button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">HR Department</a></li>
+                <li><a class="dropdown-item" href="#">Messaging</a></li>
+                <li><a class="dropdown-item" href="#">ITD</a></li>
+                <li><a class="dropdown-item" href="#">OSD</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-body p-0">
+            <table id="applicantsTable" class="table table-hover">
+              <thead class="table-light">
+                <tr>
+                  <th>Job Title</th>
+                  <th>Description</th>
+                  <th>Vacancy</th>
+                  <th>Applied Today</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Software Developer</td>
+                  <td>Develop and maintain web applications.</td>
+                  <td>3</td>
+                  <td>12</td>
+                  <td>
+                    <label class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="statusSwitch1" checked>
+                    </label>
+                  </td>
+                  <td><button class="btn btn-primary btn-sm">View</button>
+                      <button class="btn btn-secondary btn-sm">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Marketing Manager</td>
+                  <td>Lead marketing campaigns and promotions.</td>
+                  <td>2</td>
+                  <td>5</td>
+                  <td>
+                    <label class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="statusSwitch2">
+                    </label>
+                  </td>
+                  <td><button class="btn btn-primary btn-sm">View</button>
+                      <button class="btn btn-secondary btn-sm">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>HR Specialist</td>
+                  <td>Manage recruitment and employee relations.</td>
+                  <td>1</td>
+                  <td>8</td>
+                  <td>
+                    <label class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="statusSwitch3">
+                    </label>
+                  </td>
+                  <td><button class="btn btn-primary btn-sm">View</button>
+                      <button class="btn btn-secondary btn-sm">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Sales Executive</td>
+                  <td>Drive sales and revenue growth.</td>
+                  <td>4</td>
+                  <td>15</td>
+                  <td>
+                    <label class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="statusSwitch4" checked>
+                    </label>
+                  </td>
+                  <td><button class="btn btn-primary btn-sm">View</button>
+                      <button class="btn btn-secondary btn-sm">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Content Writer</td>
+                  <td>Create and edit content for digital platforms.</td>
+                  <td>5</td>
+                  <td>10</td>
+                  <td>
+                    <label class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="statusSwitch5">
+                    </label>
+                  </td>
+                  <td><button class="btn btn-primary btn-sm">View</button>
+                      <button class="btn btn-secondary btn-sm">Delete</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Modal for  Details -->
+  <div class="modal fade" id="applicantDetailsModal" tabindex="-1" aria-labelledby="applicantDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="applicantDetailsModalLabel">Applicant Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Applicant Details -->
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <h5>Full Name: <span id="applicantFullName">John Doe</span></h5>
+                <p>Applying for: <span id="applicantPosition">Software Engineer</span></p>
+                <p>Grammar: <span id="applicantGrammar">3/5</span></p>
+                <p>Typing: <span id="applicantTyping">44wpm - 100%</span></p>
+                <h6>Essay:</h6>
+                <p id="applicantEssay">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-md-6">
+                <p>Email: johndoe@gmail.com</p>
+                <p>Phone: +63 900 000 0000</p>
+                <p>Home Address: 0000 Baguio City, Philippines</p>
+              </div>
+              <div class="col-md-6">
+                <p>Preferred Work Setup: Office-based</p>
+                <p>Preferred Job Type: Full-time</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
