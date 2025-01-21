@@ -1,118 +1,180 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f8f9fa;
+}
 
-    body {
-      font-family: "Roboto", sans-serif;
-      background-color: #f8f9fa;
-    }
+/* Sidebar styles */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  color: white;
+  z-index: 1000;
+  transition: width 0.3s;
+  border-right: 0.5px solid #696969;
+}
 
-    /* Sidebar styles */
-    .sidebar {
-      width: 250px;
-      height: 100vh;
-      position: fixed;
-      top: 0;
-      left: 0;
-      background-color: #FF4545;
-      color: white;
-      z-index: 1000;
-      transition: width 0.3s;
-    }
+.sidebar .nav-link {
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
 
-    .sidebar .nav-link {
-      color: white;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 20px;
-      border-bottom: .5px solid #ffffff;
-    }
+  align-items: start;
+}
 
-    .sidebar .nav-link:hover {
-      background-color: #495057;
-    }
+.sidebar .nav-link:hover {
+  background-color: rgb(236, 236, 236);
+  color: #ff4545;
+}
 
-    .sidebar .logo-container {
-      height: 70px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      border-bottom: .5px solid #ffffff;
-    }
+.sidebar .logo-container {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
 
-    .sidebar .logo-container img {
-      height: 100%;
-      object-fit: contain;
-    }
+.sidebar .logo-container img {
+  height: 100%;
+  object-fit: contain;
+}
 
-    .top-nav {
-      position: fixed;
-      top: 0;
-      left: 250px;
-      width: calc(100% - 250px);
-      height: 70px;
-      background-color: #e8e8e8;
-      color: black;
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 20px;
-    }
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 250px;
+  width: calc(100% - 250px);
+  height: 70px;
+  background-color: rgb(236, 236, 236);
+  color: black;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
 
-    .welcome-message {
-      font-size: 1.5rem;
-      font-weight: normal;
-      color: #FF4545;
-    }
+.card-title {
+  font-weight: bolder;
+}
 
-    .date-text {
-      font-size: 14px;
-      color: #888;
-    }
+.welcome-message {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #ff4545;
+}
 
-    /* Main content styles */
-    .main-content {
-      margin-left: 250px;
-      padding: 20px;
-      margin-top: 70px;
-    }
+.date-text {
+  font-size: 14px;
+  color: #000000;
+}
 
-    .card-title {
-      font-size: 1.1rem;
-      color: #333;
-    }
+/* Main content styles */
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+  margin-top: 70px;
+}
 
-    .table th, .table td {
-      text-align: center;
-    }
+.table th,
+.table td {
+  text-align: center;
+}
 
-    .table th {
-      background-color: #f1f1f1;
-    }
+.table th {
+  background-color: #f1f1f1;
+}
 
-    .btn-primary {
-      background-color: #FF4545;
-      border-color: #FF4545;
-    }
+.btn-primary {
+  background-color: #ff4545;
+  border-color: #ff4545;
+}
 
-    /* Additional Styles */
-    .stats-card .card-body {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+/* Additional Styles */
+.stats-card .card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .chart-container {
-      display: flex;
-      gap: 30px;
-    }
-    .chart {
-      flex: 1;
-    }
+.chart-container {
+  display: flex;
+  gap: 30px;
+}
+.chart {
+  flex: 1;
+}
 
-    /* Funnel Section */
-    .funnel-section {
-      width: 30%;
-      padding: 10px;
-    }
+/* Funnel Section */
+.funnel-section {
+  width: 30%;
+  padding: 10px;
+}
 
+/* Wrapper for the custom dropdown */
+.custom-dropdown-wrapper {
+  position: relative;
+  width: 200px;
+}
+
+/* Custom dropdown button */
+.custom-dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff4545;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  margin: auto;
+}
+
+/* Dropdown text */
+.dropdown-text {
+  font-size: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* Custom dropdown icon */
+.custom-dropdown-icon {
+  font-size: 18px;
+  color: white; /* Set icon color to white */
+  padding-right: 8px;
+}
+
+/* Hidden dropdown options */
+.dropdown-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ff4545;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.dropdown-option {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-option:hover {
+  background-color: #ff4545;
+  color: white;
+}
+
+/* Show the options when the dropdown is clicked */
+.custom-dropdown-wrapper.open .dropdown-options {
+  display: block;
+}

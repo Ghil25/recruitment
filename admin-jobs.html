@@ -1,81 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Applicants</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/admin-styles.css"/>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
-</head>
-<body>
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <div class="logo-container">
-      <img src="assets/images/nms-white.png" alt="Logo">
-    </div>
-    <nav class="nav flex-column">
-      <a href="admin-dashboard.html" class="nav-link">
-        <img src="assets/icons/dashboard.svg" alt="Dashboard Icon" style="width: 20px; height: 20px;">
-        <span>Dashboard</span>
-      </a>
-      <a href="admin-applicants.html" class="nav-link active">
-        <img src="assets/icons/applicant.svg" alt="Applicants Icon" style="width: 20px; height: 20px;">
-        <span>Applicants</span>
-      </a>
-      <a href="admin-jobs.html" class="nav-link">
-        <img src="assets/icons/jobs.svg" alt="Applicants Icon" style="width: 20px; height: 20px;">
-        <span>Jobs</span>
-      </a>
-      <a href="admin-sa.html" class="nav-link">
-        <img src="assets/icons/calendar.svg" alt="Calendar Icon" style="width: 20px; height: 20px;">
-        <span>Calendar</span>
-      </a>
-      <a href="" class="nav-link">
-        <img src="assets/icons/studio-acc.svg" alt="Studio Icon" style="width: 20px; height: 20px;">
-        <span>Studio Accounts</span>
-      </a>
-      <a href="admin.html" class="nav-link">
-        <img src="assets/icons/logout.svg" alt="Logout Icon" style="width: 20px; height: 20px;">
-        <span>Logout</span>
-      </a>
-    </nav>
-  </div>
-
-  <!-- Top Navbar -->
-  <div class="top-nav">
-    <div>
-      <div class="welcome-message">
-        Welcome, Jisoo Kim!
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Applicants</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/admin-styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Add Font Awesome CDN link to the <head> section of your HTML -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <style>
+    .custom-dropdown-wrapper {
+    position: relative;
+    width: 300px;
+  }
+  
+  .custom-dropdown {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .dropdown-options {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 100%; /* Position below the dropdown */
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ff4545;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+  }
+  
+  .dropdown-option {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .dropdown-option:hover {
+    background-color: #ff4545;
+    color: white;
+  }
+  
+  .custom-dropdown-wrapper.open .dropdown-options {
+    display: block; /* Show options when .open class is applied */
+  }
+  
+  a.apl {
+    text-decoration: none;
+    color: #5b5b5b !important;
+  }
+  
+  a.apl:hover {
+    color: #ff4545 !important;
+  }
+  
+  a.apl.active {
+      color: #ff4545 !important;
+    }
+  
+  </style>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo-container">
+        <img src="assets/images/nms-logo.png" alt="Logo" />
       </div>
-      <div class="date-text">
-        January 22, 2025
+      <nav class="nav flex-column">
+        <a href="admin-dashboard.html" class="nav-link">
+          <img
+            src="assets/icons/dashboard.svg"
+            alt="Dashboard Icon"
+            style="width: 20px; height: 20px"
+          />
+          <span>Dashboard</span>
+        </a>
+        <a href="admin-applicants.html" class="nav-link">
+          <img
+            src="assets/icons/applicants.svg"
+            alt="Applicants Icon"
+            style="width: 20px; height: 20px"
+          />
+          <span>Applicants</span>
+        </a>
+        <a href="admin-applicants.html" class="nav-link">
+          <img
+            src="assets/icons/jobs.svg"
+            alt="Applicants Icon"
+            style="width: 20px; height: 20px"
+          />
+          <span>Jobs</span>
+        </a>
+        <a href="admin-calendar.html" class="nav-link">
+          <img
+            src="assets/icons/calendar.svg"
+            alt="Calendar Icon"
+            style="width: 20px; height: 20px"
+          />
+          <span>Calendar</span>
+        </a>
+        <a href="admin-sa.html" class="nav-link">
+          <img
+            src="assets/icons/studio-acc.svg"
+            alt="Studio Icon"
+            style="width: 20px; height: 20px"
+          />
+          <span>Studio Accounts</span>
+        </a>
+        <a href="admin.html" class="nav-link">
+          <img
+            src="assets/icons/logout.svg"
+            alt="Logout Icon"
+            style="width: 20px; height: 20px"
+          />
+          <span>Logout</span>
+        </a>
+      </nav>
+    </div>
+    <!-- Top Navbar -->
+    <div class="top-nav">
+      <div>
+        <div class="welcome-message">Welcome, Jisoo Kim!</div>
+        <div class="date-text">January 22, 2025</div>
+      </div>
+      <div class="nav-icons d-flex align-items-center">
+        <a
+          href="#"
+          data-bs-toggle="tooltip"
+          data-bs-placement="bottom"
+          title="Account"
+        >
+          <img
+            src="assets/images/jisoo.png"
+            alt="Profile"
+            style="width: 32px; height: 32px; border-radius: 50%"
+          />
+        </a>
       </div>
     </div>
-    <div class="nav-icons d-flex align-items-center">
-      <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Account">
-        <img src="assets/images/jisoo.png" alt="Profile" style="width: 32px; height: 32px; border-radius: 50%;"/>
-      </a>
-    </div>
-  </div>
 
-  <!-- Main Content (Applicants List) -->
-  <div class="main-content">
-    <div class="row mb-4">
+    <!-- Main Content (Applicants List) -->
+  <div class="main-content py-5 px-5">
+    <div id="applicantsTableSection" class="row mb-4">
       <div class="col-md-12">
-        <div class="card shadow-sm rounded">
-          <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
-            <h5 class="card-title m-0">Jobs</h5>
+        <div class="card shadow-sm rounded-4">
+          <div class="card-header rounded-top-4 bg-white d-flex justify-content-between align-items-center py-3" style="color: #FF4545;">
+            <div class="d-flex align-items-center column-gap-5">
+              <h5 class="card-title m-0">Jobs</h5>
+              <a href="" class="apl active">All</a>
+              <a href="" class="apl">HR Department</a>
+              <a href="" class="apl">Messaging</a>
+              <a href="" class="apl">IT Department</a>
+              <a href="" class="apl">OS Department</a>
+            </div>
             <div class="d-flex align-items-center">
-              <input type="text" class="form-control me-3" placeholder="Search Jobs">
-              <button class="btn btn-secondary dropdown-toggle me-3" type="button" data-bs-toggle="dropdown">All Industries</button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">HR Department</a></li>
-                <li><a class="dropdown-item" href="#">Messaging</a></li>
-                <li><a class="dropdown-item" href="#">ITD</a></li>
-                <li><a class="dropdown-item" href="#">OSD</a></li>
-              </ul>
+              <input type="text" class="form-control me-3 rounded-4 pt-2 pb-2" placeholder="Search Job">
+              <!-- Dropdown for sorting -->
+            <div class="custom-dropdown-wrapper">
+              <div class="custom-dropdown">
+                <span class="dropdown-text" id="periodSelectText">Last 24 hours</span>
+                <i class="fas fa-chevron-down custom-dropdown-icon"></i> <!-- Custom dropdown icon -->
+              </div>
+              <div class="dropdown-options">
+                <div class="dropdown-option active" data-value="Last 24 hours">Last 24 hours</div>
+                <div class="dropdown-option" data-value="Full-time">This week</div>
+                <div class="dropdown-option" data-value="Part-time">This month</div>
+                <div class="dropdown-option" data-value="Freelance">Freelance</div>
+              </div>
+            </div>
             </div>
           </div>
           <div class="card-body p-0">
@@ -83,131 +191,216 @@
               <thead class="table-light">
                 <tr>
                   <th>Job Title</th>
+                  <th>Salary Range/month</th>
                   <th>Description</th>
                   <th>Vacancy</th>
-                  <th>Applied Today</th>
+                  <th>Applied</th>
                   <th>Status</th>
-                  <th>Action</th>
+                  <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Software Developer</td>
-                  <td>Develop and maintain web applications.</td>
-                  <td>3</td>
-                  <td>12</td>
-                  <td>
-                    <label class="form-check form-switch">
-                      <input class="form-check-input" type="checkbox" id="statusSwitch1" checked>
-                    </label>
+                  <td class="py-3 align-items-center">Team Coach</td>
+                  <td class="py-3 align-items-center">₱20,000 - ₱40,000</td>
+                  <td class="py-3 align-items-center" style="max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                    Guides and mentors teams to improve performance, foster collaboration, and achieve goals in a positive work environment by providing support, strategies, and effective leadership techniques.
                   </td>
-                  <td><button class="btn btn-primary btn-sm">View</button>
-                      <button class="btn btn-secondary btn-sm">Delete</button>
+                  <td class="py-3 align-items-center">3</td>
+                  <td class="py-3 align-items-center">
+                    <span class="badge bg-primary rounded-4 p-2">10</span>
                   </td>
-                </tr>
-                <tr>
-                  <td>Marketing Manager</td>
-                  <td>Lead marketing campaigns and promotions.</td>
-                  <td>2</td>
-                  <td>5</td>
-                  <td>
-                    <label class="form-check form-switch">
-                      <input class="form-check-input" type="checkbox" id="statusSwitch2">
-                    </label>
+                  <td class="d-flex justify-content-center align-items-center" style="padding-top: 20px; padding-bottom: 19px;">
+                    <div class="form-check form-switch" style="display: flex; justify-content: center; align-items: center;">
+                      <input class="form-check-input" type="checkbox" id="statusToggle1" checked />
+                      <label class="form-check-label ms-2" for="statusToggle1">On</label>
+                    </div>
                   </td>
-                  <td><button class="btn btn-primary btn-sm">View</button>
-                      <button class="btn btn-secondary btn-sm">Delete</button>
+                  <td class="py-3 align-items-center">
+                    <button class="btn btn-sm btn-outline-primary rounded-4" data-bs-toggle="modal" data-bs-target="#applicantDetailsModal">View</button>
+                    <button class="btn btn-sm btn-outline-danger rounded-4">Delete</button>
                   </td>
                 </tr>
                 <tr>
-                  <td>HR Specialist</td>
-                  <td>Manage recruitment and employee relations.</td>
-                  <td>1</td>
-                  <td>8</td>
-                  <td>
-                    <label class="form-check form-switch">
-                      <input class="form-check-input" type="checkbox" id="statusSwitch3">
-                    </label>
+                  <td class="py-3 align-items-center">Software Engineer</td>
+                  <td class="py-3 align-items-center">₱30,000 - ₱60,000</td>
+                  <td class="py-3 align-items-center" style="max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Develops software applications, collaborates with cross-functional teams to design and implement features, and ensures high-quality code is delivered.</td>
+                  <td class="py-3 align-items-center">5</td>
+                  <td class="py-3 align-items-center">
+                    <span class="badge bg-primary rounded-4 p-2">12</span>
                   </td>
-                  <td><button class="btn btn-primary btn-sm">View</button>
-                      <button class="btn btn-secondary btn-sm">Delete</button>
+                   <td class="d-flex justify-content-center align-items-center" style="padding-top: 20px; padding-bottom: 19px;">
+                    <div class="form-check form-switch" style="display: flex; justify-content: center; align-items: center;">
+                      <input class="form-check-input" type="checkbox" id="statusToggle2" />
+                      <label class="form-check-label ms-2" for="statusToggle2">Off</label>
+                    </div>
                   </td>
-                </tr>
-                <tr>
-                  <td>Sales Executive</td>
-                  <td>Drive sales and revenue growth.</td>
-                  <td>4</td>
-                  <td>15</td>
-                  <td>
-                    <label class="form-check form-switch">
-                      <input class="form-check-input" type="checkbox" id="statusSwitch4" checked>
-                    </label>
-                  </td>
-                  <td><button class="btn btn-primary btn-sm">View</button>
-                      <button class="btn btn-secondary btn-sm">Delete</button>
+                  <td class="py-3 align-items-center">
+                    <button class="btn btn-sm btn-outline-primary rounded-4" data-bs-toggle="modal" data-bs-target="#applicantDetailsModal">View</button>
+                    <button class="btn btn-sm btn-outline-danger rounded-4">Delete</button>
                   </td>
                 </tr>
                 <tr>
-                  <td>Content Writer</td>
-                  <td>Create and edit content for digital platforms.</td>
-                  <td>5</td>
-                  <td>10</td>
-                  <td>
-                    <label class="form-check form-switch">
-                      <input class="form-check-input" type="checkbox" id="statusSwitch5">
-                    </label>
+                  <td class="py-3 align-items-center">Product Manager</td>
+                  <td class="py-3 align-items-center">₱40,000 - ₱80,000</td>
+                  <td class="py-3 align-items-center" style="max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Manages the product development lifecycle, defines product vision, collaborates with teams to deliver the best product solutions, and oversees product roadmaps.</td>
+                  <td class="py-3 align-items-center">2</td>
+                  <td class="py-3 align-items-center">
+                    <span class="badge bg-primary rounded-4 p-2">7</span>
                   </td>
-                  <td><button class="btn btn-primary btn-sm">View</button>
-                      <button class="btn btn-secondary btn-sm">Delete</button>
+                   <td class="d-flex justify-content-center align-items-center" style="padding-top: 20px; padding-bottom: 19px;">
+                    <div class="form-check form-switch" style="display: flex; justify-content: center; align-items: center;">
+                      <input class="form-check-input" type="checkbox" id="statusToggle3" />
+                      <label class="form-check-label ms-2" for="statusToggle3">Off</label>
+                    </div>
+                  </td>
+                  <td class="py-3 align-items-center">
+                    <button class="btn btn-sm btn-outline-primary rounded-4" data-bs-toggle="modal" data-bs-target="#applicantDetailsModal">View</button>
+                    <button class="btn btn-sm btn-outline-danger rounded-4">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-3 align-items-center">UX/UI Designer</td>
+                  <td class="py-3 align-items-center">₱25,000 - ₱50,000</td>
+                  <td class="py-3 align-items-center" style="max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Designs user interfaces and enhances user experiences by creating visually appealing and functional designs, working with developers to bring designs to life.</td>
+                  <td class="py-3 align-items-center">4</td>
+                  <td class="py-3 align-items-center">
+                    <span class="badge bg-primary rounded-4 p-2">8</span>
+                  </td>
+                   <td class="d-flex justify-content-center align-items-center" style="padding-top: 20px; padding-bottom: 19px;">
+                    <div class="form-check form-switch" style="display: flex; justify-content: center; align-items: center;">
+                      <input class="form-check-input" type="checkbox" id="statusToggle4" />
+                      <label class="form-check-label ms-2" for="statusToggle4">On</label>
+                    </div>
+                  </td>
+                  <td class="py-3 align-items-center">
+                    <button class="btn btn-sm btn-outline-primary rounded-4" data-bs-toggle="modal" data-bs-target="#applicantDetailsModal">View</button>
+                    <button class="btn btn-sm btn-outline-danger rounded-4">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-3 align-items-center">HR Manager</td>
+                  <td class="py-3 align-items-center">₱35,000 - ₱70,000</td>
+                  <td class="py-3 align-items-center" style="max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Manages HR processes such as recruitment, onboarding, employee relations, and ensuring compliance with labor laws and policies.</td>
+                  <td class="py-3 align-items-center">3</td>
+                  <td class="py-3 align-items-center">
+                    <span class="badge bg-primary rounded-4 p-2">9</span>
+                  </td>
+                   <td class="d-flex justify-content-center align-items-center" style="padding-top: 20px; padding-bottom: 19px;">
+                    <div class="form-check form-switch" style="display: flex; justify-content: center; align-items: center;">
+                      <input class="form-check-input" type="checkbox" id="statusToggle5" />
+                      <label class="form-check-label ms-2" for="statusToggle5">Off</label>
+                    </div>
+                  </td>
+                  <td class="py-3 align-items-center">
+                    <button class="btn btn-sm btn-outline-primary rounded-4" data-bs-toggle="modal" data-bs-target="#applicantDetailsModal">View</button>
+                    <button class="btn btn-sm btn-outline-danger rounded-4">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-3 align-items-center">Data Analyst</td>
+                  <td class="py-3 align-items-center">₱28,000 - ₱55,000</td>
+                  <td class="py-3 align-items-center" style="max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Collects and analyzes data to provide insights and support decision-making, using data visualization tools and statistical methods to interpret trends.</td>
+                  <td class="py-3 align-items-center">2</td>
+                  <td class="py-3 align-items-center">
+                    <span class="badge bg-primary rounded-4 p-2">6</span>
+                  </td>
+                   <td class="d-flex justify-content-center align-items-center" style="padding-top: 20px; padding-bottom: 19px;">
+                    <div class="form-check form-switch" style="display: flex; justify-content: center; align-items: center;">
+                      <input class="form-check-input" type="checkbox" id="statusToggle6" />
+                      <label class="form-check-label ms-2" for="statusToggle6">On</label>
+                    </div>
+                  </td>
+                  <td class="py-3 align-items-center">
+                    <button class="btn btn-sm btn-outline-primary rounded-4" data-bs-toggle="modal" data-bs-target="#applicantDetailsModal">View</button>
+                    <button class="btn btn-sm btn-outline-danger rounded-4">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-3 align-items-center">Marketing Specialist</td>
+                  <td class="py-3 align-items-center">₱20,000 - ₱40,000</td>
+                  <td class="py-3 align-items-center" style="max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Develops and executes marketing strategies, promotes products and services, and enhances brand visibility through various channels and campaigns.</td>
+                  <td class="py-3 align-items-center">5</td>
+                  <td class="py-3 align-items-center">
+                    <span class="badge bg-primary rounded-4 p-2">14</span>
+                  </td>
+                   <td class="d-flex justify-content-center align-items-center" style="padding-top: 20px; padding-bottom: 19px;">
+                    <div class="form-check form-switch" style="display: flex; justify-content: center; align-items: center;">
+                      <input class="form-check-input" type="checkbox" id="statusToggle7" />
+                      <label class="form-check-label ms-2" for="statusToggle7">Off</label>
+                    </div>
+                  </td>
+                  <td class="py-3 align-items-center">
+                    <button class="btn btn-sm btn-outline-primary rounded-4" data-bs-toggle="modal" data-bs-target="#applicantDetailsModal">View</button>
+                    <button class="btn btn-sm btn-outline-danger rounded-4">Delete</button>
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
+          
+          
+          
         </div>
-      </div>
-    </div>
-  </div>
-  
 
-  <!-- Modal for  Details -->
-  <div class="modal fade" id="applicantDetailsModal" tabindex="-1" aria-labelledby="applicantDetailsModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="applicantDetailsModalLabel">Applicant Details</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <!-- Applicant Details -->
-          <div class="container">
-            <div class="row">
-              <div class="col-12">
-                <h5>Full Name: <span id="applicantFullName">John Doe</span></h5>
-                <p>Applying for: <span id="applicantPosition">Software Engineer</span></p>
-                <p>Grammar: <span id="applicantGrammar">3/5</span></p>
-                <p>Typing: <span id="applicantTyping">44wpm - 100%</span></p>
-                <h6>Essay:</h6>
-                <p id="applicantEssay">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    <!-- Modal for  Details -->
+    <div
+      class="modal fade"
+      id="applicantDetailsModal"
+      tabindex="-1"
+      aria-labelledby="applicantDetailsModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="applicantDetailsModalLabel">
+              Applicant Details
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Applicant Details -->
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <h5>
+                    Full Name: <span id="applicantFullName">John Doe</span>
+                  </h5>
+                  <p>
+                    Applying for:
+                    <span id="applicantPosition">Software Engineer</span>
+                  </p>
+                  <p>Grammar: <span id="applicantGrammar">3/5</span></p>
+                  <p>Typing: <span id="applicantTyping">44wpm - 100%</span></p>
+                  <h6>Essay:</h6>
+                  <p id="applicantEssay">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="row mt-4">
-              <div class="col-md-6">
-                <p>Email: johndoe@gmail.com</p>
-                <p>Phone: +63 900 000 0000</p>
-                <p>Home Address: 0000 Baguio City, Philippines</p>
-              </div>
-              <div class="col-md-6">
-                <p>Preferred Work Setup: Office-based</p>
-                <p>Preferred Job Type: Full-time</p>
+              <div class="row mt-4">
+                <div class="col-md-6">
+                  <p>Email: johndoe@gmail.com</p>
+                  <p>Phone: +63 900 000 0000</p>
+                  <p>Home Address: 0000 Baguio City, Philippines</p>
+                </div>
+                <div class="col-md-6">
+                  <p>Preferred Work Setup: Office-based</p>
+                  <p>Preferred Job Type: Full-time</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
